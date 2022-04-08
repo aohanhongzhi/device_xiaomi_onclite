@@ -84,7 +84,7 @@ public final class DozeUtils {
                 DOZE_ENABLED, 1) != 0;
     }
 
-    protected static void launchDozePulse(Context context) {
+    public static void launchDozePulse(Context context) {
         if (DEBUG) Log.d(TAG, "Launch doze pulse");
         context.sendBroadcastAsUser(new Intent(DOZE_INTENT),
                 new UserHandle(UserHandle.USER_CURRENT));
@@ -113,15 +113,15 @@ public final class DozeUtils {
                 .getBoolean(gesture, false);
     }
 
-    protected static boolean isPickUpEnabled(Context context) {
+    public static boolean isPickUpEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_PICK_UP_KEY);
     }
 
-    protected static boolean isHandwaveGestureEnabled(Context context) {
+    public static boolean isHandwaveGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_HAND_WAVE_KEY);
     }
 
-    protected static boolean isPocketGestureEnabled(Context context) {
+    public static boolean isPocketGestureEnabled(Context context) {
         return isGestureEnabled(context, GESTURE_POCKET_KEY);
     }
 
