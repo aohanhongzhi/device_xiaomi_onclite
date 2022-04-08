@@ -43,6 +43,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             KcalUtils.writeCurrentSettings(sharedPrefs);
 
         DozeUtils.checkDozeService(context);
-        ThermalUtils.initialize(context);
+        ThermalUtils.startService(context);
     }
 }
